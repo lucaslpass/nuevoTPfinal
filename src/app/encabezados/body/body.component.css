@@ -31,28 +31,20 @@ margin-left: 4%;
   width: 80%;
   margin-left: 2%;
 }
-app-proyectos{
-display: block;
-margin-top: 10%;
-margin-left: 4%;
-}
-.img-card-for{
-  margin-left: 0%;
-  display: grid;
+
+
+.card-img{
+
   width: 100%;
   height: 100%;
-
-  background-color: bisque;
+  margin-top: 10%;
+  margin-left: 0%;
+  display: grid;
   grid-template-columns:  30vw 30vw 30vw;
   grid-template-rows: 40vh 40vh 40vh;
   grid-column-gap:2%;
   grid-row-gap:2%;
-}
 
-.li-img{
-  width: 100%;
-  height: 100%;
-  margin-left: -10%;
   justify-content: center;
 
 }

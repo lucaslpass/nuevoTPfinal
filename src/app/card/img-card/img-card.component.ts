@@ -10,11 +10,11 @@ export class ImgCardComponent implements OnInit {
   class="card-img";
   _action=false;
 
-
-  @Input() src="";
+  @Input() data:any;
+  /*@Input() src="";
   @Input() alt="";
   @Input() title="";
-
+*/
   @Output() thisAction = new EventEmitter<boolean>();
 
   constructor() { }

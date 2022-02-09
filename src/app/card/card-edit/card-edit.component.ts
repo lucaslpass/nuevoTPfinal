@@ -10,11 +10,7 @@ export class CardEditComponent implements OnInit {
   _edit="edit";
   _all="_all";
 
-  @Input()href="";
-  @Input()src="";
-  @Input()alt="";
-  @Input()nameE="";
-  @Input()exp="";
+  @Input() data:any;
 
   constructor() { }
 

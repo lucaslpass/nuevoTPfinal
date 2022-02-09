@@ -23,36 +23,31 @@
     <header>
       <h2>Experiencia</h2>
     </header>
-    <div class="div-card-edit">
-      <app-card-edit></app-card-edit>
-    </div>
-  <div *ngIf="_login" class="div-for">
-    <ul class="img-card-for">
-    <li  *ngFor="let proyecto of proyectos" class="li-img">
+  <!--   <div class="div-card-edit">
+      <app-card-edit
+       [data]="proyecto"
+       *ngFor="let proyecto of proyectos"
+      ></app-card-edit>
+    </div> -->
+<!--*ngIf="_login" -->
 
-
+ <div class="card-img">
       <app-img-card
+       [data]="proyecto"
+       *ngFor="let proyecto of proyectos"
        [class.selected]="proyecto === selectName"
        (click)="selectCard(proyecto)"
        (thisAction)="cardView($event)"
-       [alt]="proyecto.src"
-       [src]="proyecto.src"
-       [title]="proyecto.nameE"></app-img-card>
+      ></app-img-card>
+    </div>
 
-  </li>
-  </ul>
-</div>
 <div *ngIf="_card && selectName">
-
 
   <app-card
   (thisNewAction)="cardView($event)"
-  [alt]="selectName.alt"
-  [href]="selectName.href"
-  [exp]="selectName.exp"
-  [nameE]="selectName.nameE"
-
-  ></app-card>
+  [data]="selectName"
+  >
+  </app-card>
 
 </div>
   </div>

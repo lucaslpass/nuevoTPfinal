@@ -9,11 +9,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CardComponent implements OnInit {
 
   _close=false;
+
+
+  @Input() data : any;
+
+  /*
   @Input()href="";
   @Input()src="";
   @Input()alt="";
   @Input()nameE="";
   @Input()exp="";
+  */
+
   @Output() thisNewAction =new EventEmitter<boolean>()
 
   constructor() { }
