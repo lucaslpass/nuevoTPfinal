@@ -1,22 +1,19 @@
 
-  <ul class="btncs">
+  <div class="btncs">
 
-    <li  *ngFor="let btnc of btncs">
+
 
       <a
-      id="{{btnc.id}}"
-      href="{{btnc.href}}"
-      class="{{btnc.classA}}"
-      target="{{btnc.target}}"
+      id="{{data.id}}"
+      href="{{data.href}}"
+      class="btn-div"
+      target="{{data.target}}"
       >
-        <img
-        class="{{btnc.classB}}"
-        src="{{btnc.src}}"
-        alt="{{btnc.alt}}"
-        >
+      <app-img [data]="data"></app-img>
+
       </a>
 
-    </li>
 
-  </ul>
+
+    </div>
 

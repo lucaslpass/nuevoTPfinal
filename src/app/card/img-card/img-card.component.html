@@ -2,9 +2,10 @@
   <div class="class-img">
   <app-img
  [data]="data"
+ [classImg]="class_img"
  ></app-img>
   </div>
 <div class="title"(click)=" cardAction(_action)">
-  <app-title  [title]="data.nameE" [class]="class"></app-title>
+  <app-title  [title]="data.nameE" [class]="class_img"></app-title>
 </div>
 </div>

@@ -42,6 +42,7 @@ import { SidebarComponent } from './encabezados/sidebar/sidebar.component';
     SidebarComponent,
 
 
+
   ],
   imports: [
     BrowserModule,

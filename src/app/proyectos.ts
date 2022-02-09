@@ -1,7 +1,7 @@
 export interface Proyecto {
 
   id:number;
-  classR:string;
+  class_img:string;
   src:string;
   alt:string;
   href:string;

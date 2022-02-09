@@ -7,10 +7,12 @@ import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./img-card.component.css']
 })
 export class ImgCardComponent implements OnInit {
-  class="card-img";
+  class_img="card-img";
+
   _action=false;
 
   @Input() data:any;
+
   /*@Input() src="";
   @Input() alt="";
   @Input() title="";
