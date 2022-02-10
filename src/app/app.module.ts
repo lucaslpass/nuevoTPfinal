@@ -23,6 +23,13 @@ import { ProyectosComponent } from './encabezados/section/proyectos/proyectos.co
 import { ExperienciaComponent } from './encabezados/section/experiencia/experiencia.component';
 import { EducacionComponent } from './encabezados/section/educacion/educacion.component';
 import { HardComponent } from './encabezados/section/hard/hard.component';
+import { ExperienciaLoginComponent } from './encabezados/section/experiencia-login/experiencia-login.component';
+import { EducacionLoginComponent } from './encabezados/section/educacion-login/educacion-login.component';
+import { HardLoginComponent } from './encabezados/section/hard-login/hard-login.component';
+import { ProyectosLoginComponent } from './encabezados/section/proyectos-login/proyectos-login.component';
+import { BodyLoginComponent } from './encabezados/body-login/body-login.component';
+import { HeaderLoginComponent } from './encabezados/header-login/header-login.component';
+
 
 
 
@@ -48,7 +55,12 @@ import { HardComponent } from './encabezados/section/hard/hard.component';
     ExperienciaComponent,
     EducacionComponent,
     HardComponent,
-
+    ExperienciaLoginComponent,
+    EducacionLoginComponent,
+    HardLoginComponent,
+    ProyectosLoginComponent,
+    HeaderLoginComponent,
+    BodyLoginComponent,
 
 
   ],
