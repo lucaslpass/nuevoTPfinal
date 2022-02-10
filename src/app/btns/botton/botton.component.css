@@ -13,12 +13,17 @@
     justify-content: space-between;
     margin-top:var(--top);
   }
-
+   app-img{
+     background-color: transparent;
+     border-radius:var(--borderRadius);
+    }
 
   .btn-div:hover{
    border-radius:50%;
-   box-shadow: 0 20px 40px var(--color_shadow_contac_1), 0 20px 40px var(--color_shadow_contac_2) ;
-   background:var(--color_hover_contac);
+   --borderRadius:50%;
+   --color_hover_contac:rgba(51, 47, 50, 0.075);
+   box-shadow: 0px 0px 40px var(--color_shadow_contac_1), 0px 0px 40px var(--color_shadow_contac_2) ;
+
    position: relative;
    animation-name:btn-contac;
    animation-duration: 0.5s;

@@ -18,7 +18,8 @@
   outline: none;
   height:  6vh;
   width: 4vw;
-  background-color:transparent;
+border-radius:var(--borderRadius);
+  background-color:var( --color_hover_contac) ;
 }
 
 .img-baner{

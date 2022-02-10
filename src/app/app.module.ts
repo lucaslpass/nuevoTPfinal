@@ -19,6 +19,10 @@ import { LoginComponent } from './card/login/login.component';
 import { HomeComponent } from './encabezados/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './encabezados/sidebar/sidebar.component';
+import { ProyectosComponent } from './encabezados/section/proyectos/proyectos.component';
+import { ExperienciaComponent } from './encabezados/section/experiencia/experiencia.component';
+import { EducacionComponent } from './encabezados/section/educacion/educacion.component';
+import { HardComponent } from './encabezados/section/hard/hard.component';
 
 
 
@@ -40,6 +44,10 @@ import { SidebarComponent } from './encabezados/sidebar/sidebar.component';
     LoginComponent,
     HomeComponent,
     SidebarComponent,
+    ProyectosComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HardComponent,
 
 
 
