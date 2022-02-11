@@ -3,13 +3,20 @@
       <div class="contenedor1">
 
         <div class="btn" >
-          <app-btn-delete-back class="delete-all1" (editThis)="editAction($event)" [_id]="_all"></app-btn-delete-back>
+          <app-btn-delete-back class="delete-all1" (editThis)="editAction($event)"
+          [class.selected]="data === selectName"
+          (click)="selectCard(data)"
+
+          [_id]="_all"></app-btn-delete-back>
 
         </div>
 
 
               <div class="div-img1">
-                <app-btn-delete-back class="edit-img1" (editThis)="editAction($event)" [_id]="_edit" ></app-btn-delete-back>
+                <app-btn-delete-back class="edit-img1" (editThis)="editAction($event)"
+                [class.selected]="data.src + data.alt === selectName"
+               (click)="selectImg( )"
+                [_id]="_edit" ></app-btn-delete-back>
 
                 <app-img [data]="data"></app-img>
 
@@ -17,21 +24,47 @@
             </div>
 
              <div class="div-title1">
-          <div class="div-titlet">
+          <div *ngIf="!_title"  class="div-titlet">
 
             <h3>{{data.nameE}}</h3>
             </div>
-            <app-btn-delete-back class="edit-title1" (editThis)="editAction($event)" [_id]="_edit" ></app-btn-delete-back>
+            <div *ngIf="_title">
+              <label for="name">exp:{{name}} </label>
+              <input id="name"  [(ngModel)]="name"placeholder="name">
+              <button>submit</button>
+              <button (click)="_title=false">cancel</button>
+            </div>
+            <app-btn-delete-back
+            *ngIf="!_title"
+            class="edit-title1"
+            (editThis)="editAction($event)"
+            [class.selected]="data.nameE === name"
+            (click)="selectTitle( )"
+            (click)="_title=true"
+            [_id]="_edit" ></app-btn-delete-back>
 
 
           </div>
             <div  class="div-exp1">
-              <div class="div-expt">
+              <div *ngIf="!_exp" class="div-expt">
               <h5>{{data.exp}}</h5>
             </div>
 
-            <app-btn-delete-back class="edit-exp1" (editThis)="editAction($event)" [_id]="_edit" ></app-btn-delete-back>
+            <app-btn-delete-back
+            *ngIf="!_exp"
+            [class.selected]="data.exp === selectName"
+            (click)="selectExp( )"
+            class="edit-exp1"
+            (editThis)="editAction($event)"
+            (click)="_exp=true"
+             [_id]="_edit" ></app-btn-delete-back>
 
+             <div *ngIf="_exp">
+              <label for="name">exp:{{exp}} </label>
+              <input id="name"  [(ngModel)]="exp"placeholder="name">
+           <button>submit</button>
+           <button (click)="_exp=false">cancel</button>
+            </div>
             </div>
 
             </div>

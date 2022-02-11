@@ -13,10 +13,6 @@ export class ImgCardComponent implements OnInit {
 
   @Input() data:any;
 
-  /*@Input() src="";
-  @Input() alt="";
-  @Input() title="";
-*/
   @Output() thisAction = new EventEmitter<boolean>();
 
   constructor() { }
