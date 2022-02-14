@@ -31,7 +31,7 @@
             <div *ngIf="_title">
               <label for="name">exp:{{name}} </label>
               <input id="name"  [(ngModel)]="name"placeholder="name">
-              <button>submit</button>
+              <button (click)="envioDataTitle()" >submit</button>
               <button (click)="_title=false">cancel</button>
             </div>
             <app-btn-delete-back

@@ -13,13 +13,6 @@ export class CardComponent implements OnInit {
 
   @Input() data : any;
 
-  /*
-  @Input()href="";
-  @Input()src="";
-  @Input()alt="";
-  @Input()nameE="";
-  @Input()exp="";
-  */
 
   @Output() thisNewAction =new EventEmitter<boolean>()
 

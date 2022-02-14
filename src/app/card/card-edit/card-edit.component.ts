@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Data } from '@angular/router';
 
 @Component({
@@ -15,6 +15,9 @@ export class CardEditComponent implements OnInit {
   name?:string;
   exp?:string;
   @Input() data:any;
+
+  @Output() editTitle = new EventEmitter<any>();
+
 
   constructor() { }
 
@@ -36,18 +39,32 @@ export class CardEditComponent implements OnInit {
    }
    selectTitle(){
     this.name = this.data.nameE;
-    console.log(this.selectName)
+    console.log(  "selectTitle" + this.name)
     }
     selectExp(){
       this.exp = this.data.exp;
-      console.log(this.selectName)
+      console.log(this.exp)
       }
       selectImg(){
         this.selectName = this.data.src + this.data.alt;
         console.log(this.selectName)
         }
+    envioDataTitle(){
+        this.data.nameE=this.name;
+        this.editTitle.emit(this.data);
+        console.log(this.editTitle)
+
+    }
+ /*   envioDataExp(){
+      this.data.exp=this.exp;
+      return this.editTiTle.emit(this.data);
+      console.log(this.data)
+  }*/
+  envioDataImg(){
+    this.data.nameE=this.name;
 
 
+  }
 
 }
 

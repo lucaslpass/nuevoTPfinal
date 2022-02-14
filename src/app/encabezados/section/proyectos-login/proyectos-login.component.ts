@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PROYECTO } from 'src/app/mock-proyectos';
 import { Proyecto } from 'src/app/proyectos';
 
@@ -12,6 +12,8 @@ export class ProyectosLoginComponent implements OnInit {
   selectName?:Proyecto
   _card= false;
   _login=false;
+  mensaje:any=[];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -24,6 +26,11 @@ export class ProyectosLoginComponent implements OnInit {
   selectCard(name:Proyecto){
    this.selectName= name;
    console.log(this.selectName.nameE)
+   }
+   mensajeT(e: any){
+
+     this.mensaje= e
+     console.log("mensaje recivido"+ this.mensaje.nameE)
    }
 
 }

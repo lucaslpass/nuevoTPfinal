@@ -1,6 +1,8 @@
    <div class="div-card-edit">
       <app-card-edit
        [data]="proyecto"
+       (editTitle)="mensajeT($event)"
+
        *ngFor="let proyecto of proyectos"
       ></app-card-edit>
     </div>
