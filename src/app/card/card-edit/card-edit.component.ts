@@ -7,17 +7,22 @@ import { Data } from '@angular/router';
   styleUrls: ['./card-edit.component.css']
 })
 export class CardEditComponent implements OnInit {
+
   _title=false;
   _exp=false;
   _edit="edit";
   _all="_all";
+
   selectName?:Data;
   name?:string;
   exp?:string;
+  src?:string ;
+
   @Input() data:any;
 
   @Output() editTitle = new EventEmitter<any>();
-
+  @Output() editExp   = new EventEmitter<any>();
+  @Output() editImg   = new EventEmitter<any>();
 
   constructor() { }
 
@@ -55,15 +60,15 @@ export class CardEditComponent implements OnInit {
         console.log(this.editTitle)
 
     }
- /*   envioDataExp(){
+    envioDataExp(){
       this.data.exp=this.exp;
-      return this.editTiTle.emit(this.data);
-      console.log(this.data)
-  }*/
+      console.log(this.data);
+      return this.editExp.emit(this.data);
+
+  }
   envioDataImg(){
-    this.data.nameE=this.name;
-
-
+    this.data.src=this.src;
+    return this.editImg.emit(this.data)
   }
 
 }

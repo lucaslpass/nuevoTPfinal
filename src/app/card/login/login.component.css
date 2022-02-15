@@ -41,11 +41,12 @@ background-color: #00008b;
 }
 app-btn-delete-back{
   position: relative;
-  top: -4%;
-  left: 92%;
+  top: -8%;
+  left: 100%;
 }
 app-btn-sub{
 display: block;
 
 margin:auto;
 }
+

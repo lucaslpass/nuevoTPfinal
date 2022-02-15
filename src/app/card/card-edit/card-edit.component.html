@@ -62,7 +62,10 @@
              <div *ngIf="_exp">
               <label for="name">exp:{{exp}} </label>
               <input id="name"  [(ngModel)]="exp"placeholder="name">
-           <button>submit</button>
+           <button
+
+           (click)="selectExp( )"
+           >submit</button>
            <button (click)="_exp=false">cancel</button>
             </div>
             </div>

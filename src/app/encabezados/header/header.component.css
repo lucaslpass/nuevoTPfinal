@@ -42,3 +42,26 @@ height: var(--header_ancho) ;
   display: block;
   margin-left: 55%;
 }
+.img-baner{
+  display: block;
+  margin-top: -18%;
+  margin-left: 2;
+  border-end-end-radius: 8% 8% ;
+  height: 50vh;
+  width: 95vw;
+  background-color: chartreuse;
+  position: absolute;
+  z-index: 1;
+}
+.img-foto{
+  display :block;
+  margin-top: 22.9%;
+  margin-left: 5%;
+  border-radius: 50%;
+  height: 40vh;
+  width: 20vw;
+  background-color: blue;
+  position: relative;
+  z-index: 2;
+}
+

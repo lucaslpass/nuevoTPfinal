@@ -1,17 +1,47 @@
-<div class="div-login">
-  <form class="login">
-    <app-btn-delete-back></app-btn-delete-back>
+<div *ngIf="_abierto" class="div-login">
+  <form [formGroup]="formLogin" (submit)="send()" class="login" errorTailor
+
+  >
+    <app-btn-delete-back (click)="cerrar()"[_id]="_all"></app-btn-delete-back>
 
 
      <div class="div-sec">
-      <input class="input" type="email" placeholder="Ingrese su correo electronico">
+
+      <input class="input" type="email"  formControlName="email" placeholder="Ingrese su correo electronico"
+      [controlErrorsTpl]="errorEmail"
+      >
     </div>
+
     <div class="div-sec" >
-    <input class="input" type="text" placeholder="contraseña">
+    <input  class="input" type="password"  formControlName="password" placeholder="contraseña"
+    [controlErrorsTpl]="errorPass"
+    >
 
-  </div>
+  </div >
 
-  <app-btn-sub></app-btn-sub>
+  <app-btn-sub  *ngIf="formLogin.invalid" [mensaje]="estado"></app-btn-sub>
+
+  <ng-template let-error let-text="text" #errorEmail>
+    {{error|json}} {{text}}
+    <div *ngIf="error?.requierd">
+      <i> Campo vacio</i>
+    </div>
+    <div *ngIf="error?.email">
+     <i>Email invalido</i>
+    </div>
+  </ng-template>
+
+
+
+  <ng-template let-error let-text="text" #errorPass>
+    {{error|json}} {{text}}
+    <div *ngIf="error?.requierd">
+      <i>Campo vacio</i>
+    </div>
+    <div *ngIf="error?.minleght">
+     <i> Password invalida</i>
+    </div>
+  </ng-template>
 
   </form>
   </div>

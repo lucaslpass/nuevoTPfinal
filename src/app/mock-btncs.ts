@@ -28,7 +28,7 @@ export const BTNC: BtnC[] = [
   },
   {
     id: 3,
-    href: ".login",
+    href: "header/login",
 
     class_img: "btn-img",
     src: "https://c0.klipartz.com/pngpicture/419/473/gratis-png-iconos-de-computadora-usuario-perfil-inicio-de-sesion-usuario.png",

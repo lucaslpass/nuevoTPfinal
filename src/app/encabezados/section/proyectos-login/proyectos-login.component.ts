@@ -27,10 +27,22 @@ export class ProyectosLoginComponent implements OnInit {
    this.selectName= name;
    console.log(this.selectName.nameE)
    }
-   mensajeT(e: any){
+   submitTitle(e: any){
 
      this.mensaje= e
      console.log("mensaje recivido"+ this.mensaje.nameE)
    }
+
+
+submitExp(e: any){
+
+  this.mensaje= e
+  console.log("mensaje recivido"+ this.mensaje.nameE)
+}
+submitImg(e: any){
+
+  this.mensaje= e
+  console.log("mensaje recivido"+ this.mensaje.nameE)
+}
 
 }

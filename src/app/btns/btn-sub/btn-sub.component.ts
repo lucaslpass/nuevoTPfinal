@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-btn-sub',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./btn-sub.component.css']
 })
 export class BtnSubComponent implements OnInit {
+
+  @Input() mensaje="";
 
   constructor() { }
 
